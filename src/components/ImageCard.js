@@ -38,12 +38,15 @@ class ImageCard extends Component {
               {moment(this.props.image.user.updated_at).format("LLL")}
             </span>
           </div>
-          <div className="description">{description}</div>
+          <div className="description">
+            <i class="archive icon"></i>
+            Total collections: {this.props.image.user.total_collections}
+          </div>
         </div>
         <div className="extra content">
           <a href={this.props.image.user.links.likes}>
-            <i className="user icon"></i>
-            Likes: {this.props.image.user.total_likes}
+            <i className="hand point right outline icon"></i>
+            {this.props.image.user.total_likes}
           </a>
         </div>
       </div>
